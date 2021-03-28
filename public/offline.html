@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <title>Esie - Veilig online!</title>
+  <style type="text/css">
+
+    .body {
+      background: #010606;
+      font-family: 'Encode Sans Expanded', sans-serif;
+    }
+
+    .container {
+      color: #fff;
+      background: #010606;
+    }
+
+    .wrapper {
+      display: grid;
+      z-index: 1;
+      height: 100vh;
+      width: 100%;
+      max-width: 1100px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 0 24px;
+      justify-content: center;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .column1 {
+      margin-bottom: 15px;
+      padding: 0 15px;
+      grid-area: col1;
+    }
+
+    .column2 {
+      margin-bottom: 15px;
+      padding: 0 15px;
+      grid-area: col2;
+    }
+
+    .textwrapper {
+      max-width: 540px;
+      padding-top: 0;
+      padding-bottom: 60px;
+    }
+
+    .topline {
+      color: #01bf71;
+      text-align: center;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .heading {
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .subtitle {
+      max-width: 440px;
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400px;
+      color: #fff;
+    }
+
+    .imgwrap {
+      max-width: 555px;
+      height: 100%;
+    }
+
+    .img {
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding-right: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 100px 0;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .heading {
+        font-size: 32px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="row">
+        <div class="column1">
+          <div class="textwrapper">
+            <div class="topline"><p>GEEN INTERNET</p></div>
+            <div class="heading"><h1>Offline!<h1></div>
+            <div class="subtitle"><p>Het lijkt erop dat u geen internet verbinding heeft. U heeft een internet verbinding nodig om Esie te bezoeken, als u denkt dat dit een fout is probeer de pagina te herladen met de F5 toets.</p></div>
+          </div>
+        </div>
+        <div class="column2">
+          <div class="imgwrap">
+            <i class="fas fa-wifi-slash"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
