@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 export const Cards = styled.div`
   padding: 4rem;
@@ -37,7 +38,6 @@ export const CardsItem = styled.div`
   display: flex;
   flex: 1;
   margin: 0 1rem;
-  width: 400px;
   border-radius: 10px;
   background: #fff;
   transition: all 0.4s ease-in-out;
@@ -50,6 +50,10 @@ export const CardsItem = styled.div`
   @media screen and (max-width: 1024px) {
     margin-bottom: 2rem;
     width: 340px;
+  }
+
+  @media screen and (orientation: landscape) {
+    width: ${isMobile ? '560px' : '400px'};
   }
 `;
 

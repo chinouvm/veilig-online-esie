@@ -1,17 +1,12 @@
 import React from 'react';
 import zxcvbn from 'zxcvbn';
-import {
-  ContainerCheck,
-  ProgressText,
-  P,
-  Progress,
-  ProgressBar,
-} from './CheckerElements';
+import { ContainerCheck, ProgressText, P, Progress, ProgressBar } from './CheckerElements';
 
 const CheckerMeter = ({ passwordCheck }) => {
   const testResult = zxcvbn(passwordCheck);
   const num = (testResult.score * 100) / 4;
 
+  // Label
   const createPassLabel = () => {
     switch (testResult.score) {
       case 0:
@@ -29,6 +24,7 @@ const CheckerMeter = ({ passwordCheck }) => {
     }
   };
 
+  // Kleuren
   const funcProgressColor = () => {
     switch (testResult.score) {
       case 0:
@@ -46,6 +42,7 @@ const CheckerMeter = ({ passwordCheck }) => {
     }
   };
 
+  // Kleur Change
   const changePasswordColor = () => ({
     width: `${num}%`,
     background: funcProgressColor(),

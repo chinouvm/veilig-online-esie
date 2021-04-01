@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import CheckerMeter from './CheckerMeter';
+
+// React Icons
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { Button } from '../../ButtonElement';
+
 import {
   PasswordCheckerContainer,
   PasswordCheckerWrapper,
@@ -31,7 +34,7 @@ function Checker() {
   };
   return (
     <>
-      <PasswordCheckerContainer id="checker">
+      <PasswordCheckerContainer id='checker'>
         <PasswordCheckerWrapper>
           <PasswordCheckerRow>
             <Column1>
@@ -41,8 +44,8 @@ function Checker() {
                 </CheckerName>
                 <CheckerInput>
                   <Input
-                    type="password"
-                    placeholder="Wachtwoord"
+                    type='password'
+                    placeholder='Wachtwoord'
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </CheckerInput>
@@ -56,12 +59,12 @@ function Checker() {
                 <TopLine>veiligheid</TopLine>
                 <Heading>Wachtwoord checker</Heading>
                 <SubTitle>
-                  Check hier of uw wachtwoord sterk is en wat u eventueel kunt
-                  aanpassen om het sterker te maken.
+                  Check hier of uw wachtwoord sterk is en wat u eventueel kunt aanpassen om het
+                  sterker te maken.
                 </SubTitle>
                 <BtnWrap>
                   <Button
-                    to="pwnd"
+                    to='pwnd'
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     smooth={true}

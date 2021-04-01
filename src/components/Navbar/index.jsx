@@ -1,5 +1,8 @@
 import React from 'react';
+
+// Font Awesome
 import { FaBars } from 'react-icons/fa';
+
 import {
   Nav,
   NavbarContainer,
@@ -19,10 +22,10 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">
+          <NavLogo to='/'>
             ESIE
             <Icon>
-              <span className="fas fa-shield-alt"></span>
+              <span className='fas fa-shield-alt'></span>
             </Icon>
           </NavLogo>
           <MobileIcon onClick={toggle}>
@@ -30,20 +33,20 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinksAbout to="over-ons" smooth={true} offset={-80}>
+              <NavLinksAbout to='over-ons' smooth={true} offset={-80}>
                 Over Ons
               </NavLinksAbout>
             </NavItem>
             <NavItem>
-              <NavLinks to="/tools">Tools</NavLinks>
+              <NavLinks to='/tools'>Tools</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="meer-gevaren">Gevaren</NavLinks>
+              <NavLinks to='meer-gevaren'>Gevaren</NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/download">
-              Download <i className="fas fa-download DIcon" />
+            <NavBtnLink to='/download'>
+              Download <i className='fas fa-download DIcon' />
             </NavBtnLink>
           </NavBtn>
         </NavbarContainer>
