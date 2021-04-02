@@ -1,6 +1,6 @@
-# Bababoey met Ziehe
+# Veilig online met Esie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dit project is gemaakt met [React.Js](https://reactjs.org/)
 
 ## Available Scripts
 
