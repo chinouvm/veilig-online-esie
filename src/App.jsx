@@ -23,58 +23,61 @@ const Nepnieuws = lazy(() => import('./pages/nepnieuws'));
 
 // Main App
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+ const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+ const toggle = () => {
+  setIsOpen(!isOpen);
+ };
+
+ (function (d, m) {
+  var kommunicateSettings = {
+   appId: '23cddffdce5721a0eb1952c01bb81b91',
+   popupWidget: true,
+   automaticChatOpenOnNavigation: true,
   };
-  
- 
- 
-// Tawk To
-  (function () {
-    var s1 = document.createElement('script'),
-      s0 = document.getElementsByTagName('script')[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/6050d522f7ce18270930b107/1f0ts13mn';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = 'https://widget.kommunicate.io/v2/kommunicate.app';
+  var h = document.getElementsByTagName('head')[0];
+  h.appendChild(s);
+  window.kommunicate = m;
+  m._globals = kommunicateSettings;
+ })(document, window.kommunicate || {});
 
-  return (
-    <Router>
-      <Suspense fallback={<div></div>}>
-        <ScrollToTop />
-        <Sidebar isOpen={isOpen} toggle={toggle} />
-        <Navbar toggle={toggle} />
-      </Suspense>
-      <Route
-        render={({ location }) => (
-          <TransitionGroup>
-            <CSSTransition key={location.key} timeout={200} classNames='fade'>
-              <Switch location={location}>
-                <Route path='/' component={Home} exact />
-                <Suspense fallback={<div></div>}>
-                  <Route path='/download' component={DownloadPage} exact />
-                  <Route path='/tools' component={Tools} exact />
-                  <Route path='/phishing' component={Phishing} exact />
-                  <Route path='/malware' component={Malware} exact />
-                  <Route path='/virussen' component={Virussen} exact />
-                  <Route path='/nepnieuws' component={Nepnieuws} exact />
-                  <Route path='/meer-gevaren' component={Gevaren} exact />
-                </Suspense>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )}
-      />
-      <Suspense fallback={<div></div>}>
-        <About />
-        <Footer />
-      </Suspense>
-    </Router>
-  );
+ return (
+  <Router>
+   <Suspense fallback={<div></div>}>
+    <ScrollToTop />
+    <Sidebar isOpen={isOpen} toggle={toggle} />
+    <Navbar toggle={toggle} />
+   </Suspense>
+   <Route
+    render={({ location }) => (
+     <TransitionGroup>
+      <CSSTransition key={location.key} timeout={200} classNames='fade'>
+       <Switch location={location}>
+        <Route path='/' component={Home} exact />
+        <Suspense fallback={<div></div>}>
+         <Route path='/download' component={DownloadPage} exact />
+         <Route path='/tools' component={Tools} exact />
+         <Route path='/phishing' component={Phishing} exact />
+         <Route path='/malware' component={Malware} exact />
+         <Route path='/virussen' component={Virussen} exact />
+         <Route path='/nepnieuws' component={Nepnieuws} exact />
+         <Route path='/meer-gevaren' component={Gevaren} exact />
+        </Suspense>
+       </Switch>
+      </CSSTransition>
+     </TransitionGroup>
+    )}
+   />
+   <Suspense fallback={<div></div>}>
+    <About />
+    <Footer />
+   </Suspense>
+  </Router>
+ );
 }
 
 export default App;

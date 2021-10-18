@@ -6,4 +6,4 @@ Dit project is gemaakt met [React.Js](https://reactjs.org/)
 
 Project: [Esie](https://esie.nl)
 
-### Gemaakt door: Chinou en Teun
+### Gemaakt door: Chinou, Isaac en Teun
