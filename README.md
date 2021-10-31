@@ -1,4 +1,4 @@
-![ESIE](https://i.imgur.com/bc6NNIx.png "Esie - Veilig online")
+![ESIE](https://i.imgur.com/ghArnjF.png "Esie - Veilig online!")
 # Veilig online met Esie
 
 Dit project is gemaakt met [React.Js](https://reactjs.org/)
